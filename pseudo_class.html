@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+        <style>
+
+            h1{
+                color: goldenrod;
+            }
+
+            .special-effect:hover{
+                color:greenyellow;
+                font-size: 50px;
+                background-color:hotpink;
+            }
+
+            input:focus{
+                font-size: 20px;
+                color: blue;
+                font-weight: 700;
+            }
+            
+
+            li{
+                font-size: 30px;
+            }
+
+            /* li:last-child{
+                 color:indianred;
+            }
+
+            li:first-child{
+                color:green;
+            } */
+
+            li:nth-child(2n){
+                background-color:hotpink;
+            }
+
+            li:nth-child(2n+1){
+                background-color:lawngreen;
+            }
+
+            li:nth-last-child(1){
+                color:lightseagreen;
+            }
+
+            a{
+                font-size: 20px;
+            }
+
+            a:visited{
+                color:green;
+            }
+
+
+        </style>
+
+</head>
+<body>
+    <h1>This is pseudo effect</h1>
+    <h1>This is pseudo effect</h1>
+    <h1 class="special-effect">This is pseudo effect</h1>
+
+    <input name="Mail" type="text">
+    <br>
+    <input name="password" type="text">
+
+    <ul>
+        <li>AAAA</li>
+        <li>BBBB</li>
+        <li>CCCC</li>
+        <li>DDDD</li>
+        <li>EEEE</li>
+        <li>FFFF</li>
+        <li>GGGG</li>
+        <li>HHHH</li>
+    </ul>
+
+    <br>
+
+    <a href="https://www.google.com/">GOOGLE</a>
+    <br>
+    <a href="https://www.apple.com">Apple</a>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+        <style>
+
+            h1::after{
+                content: " ,WOW!";
+                color: gray;
+                font-size: 50px;
+            }
+
+            h1::before{
+                content: "Hello ";
+                color: rgb(255, 2, 2);
+                font-size: 50px;
+            }
+
+            .pseudo::before{
+                content: "This is unselectable pseudo effect, thaose are defined by before after elements except the (.)"
+            }
+
+            /* Counter */
+            body{
+                counter-reset: section;
+            }
+
+            p::before{
+                counter-increment: section;
+                content: "Crush " counter(section) ":";
+            }
+            /* Counter */
+
+            #heart-emoji p::before{
+                content: "❤️";
+            }
+
+
+
+            
+
+        </style>
+
+</head>
+<body>
+    <h1>This is pseudo effect</h1>
+    <h1>This is pseudo effect</h1>
+    <h1 class="special-effect">This is pseudo effect</h1>
+
+    <p class="pseudo">.</p>
+
+    <input name="Mail" type="text">
+    <br>
+    <input name="password" type="text">
+
+
+        <p>AAAA</p>
+        <p>BBBB</p>
+        <p>CCCC</p>
+        <p>DDDD</p>
+        <p>EEEE</p>
+        <p>FFFF</p>
+        <p>GGGG</p>
+        <p>HHHH</p>
+
+
+     <div id="heart-emoji">
+        <p>AAAA</p>
+        <p>BBBB</p>
+        <p>CCCC</p>
+        <p>DDDD</p>
+        <p>EEEE</p>
+        <p>FFFF</p>
+        <p>GGGG</p>
+        <p>HHHH</p>
+    </div>
+
+
+    <br>
+
+    <a href="https://www.google.com/">GOOGLE</a>
+    <br>
+    <a href="https://www.apple.com">Apple</a>
+
+</body>
+</html>

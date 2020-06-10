@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Cascading Style Sheet</title>
+    <style>
+        h1{
+            color:salmon;
+            background-color:slategray;
+            width: 50%;
+            height: 90px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p{
+            color:rgb(113, 244, 96);
+            font-size: 50px;
+            font-weight:900;
+        }
+        #Murgi{
+            color:rgb(255, 217, 0);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 90px;
+        }
+
+        .friend{
+            color:red;
+            background-color: greenyellow;
+            font-size: 25px;
+        }
+
+        h1.friend{
+            color:rgb(255, 217, 0);
+            background-color: brown;
+        }
+
+        .neighbour{
+            font-size: 90px;
+            color:cadetblue;
+            background: darkblue;
+            font-weight: 500;
+            font-family: serif;
+            width: 1000px;
+            height: 100px;
+        }
+
+        .romantic{
+            font-style: italic;
+            color: black;
+        }
+
+
+        .blog{
+            font-size: 40px;
+            margin: auto;
+
+        }
+        .blog p{
+            color: brown;
+            margin: auto;
+        }
+        .blog img{
+            width: 50%;
+            height: 400px;
+        }
+     
+
+    </style>
+</head>
+<body>
+
+
+    <div class="blog">
+        <h3>Hills</h3>
+        <p>Aita hoitese pahar</p>
+        <img src="img/Mountain.jpg" alt="">
+    </div>
+
+    <div class="blog">
+        <h3>Hills</h3>
+        <p>Aita hoitese Somudro</p>
+        <img src="img/Ocean.jpg" alt="">
+    </div>
+
+    <div class="blog">
+        <h3>Hills</h3>
+        <p>Aita hoitese Math</p>
+        <img src="img/Green Field.jpg" alt="">
+    </div>
+
+    <h1 class="friend">Adding Makeup</h1>
+    <p class="neighbour">This is a neighbour</p>
+    <p id="Murgi">The full form of div is Division</p>
+    <P class="friend neighbour">Hubby, mobile charge nai</P>
+    <p class="friend">January, February, March, August</p>
+    <p class="friend">April, May, June, July</p>
+    <p class="friend">September, Octobor, Novomber, December</p>
+    <p class="friend">Hubby ekhane boshe thako r <span class="romantic">valobasha nao</span> ekhon.</p>
+</body>
+</html>

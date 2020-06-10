@@ -1,0 +1,9 @@
+.container{
+    width: 700px;
+}
+.navbar{
+    float: left;
+}
+.menu{
+    text-align: right;
+}
