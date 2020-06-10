@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id="first" class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Dolorum animi eligendi repellendus provident!</li>
+            <li class="item">Dicta quam esse hic nulla.</li>
+            <li class="item">Placeat ratione cum laudantium corporis.</li>
+            <li class="item">Voluptatibus iste nesciunt dolorem dolores?</li>
+        </ul>
+        <button id="addNew">New Item</button>
+    </div>
+
+    <script>
+        // var items = document.getElementsByClassName('item');   //that's alternative of myList..
+        // for (let i = 0; i < items.length; i++) {
+        //     var item = items[i];
+        //     item.addEventListener('click', function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        document.getElementById("addNew").addEventListener('click', function(event){
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText =  "Brand New Item";
+            itemParent.appendChild(newItem);
+        })
+
+
+        // first = document.getElementById('first').addEventListener('click', function(event){
+        //     console.log('First item clicked');
+        //     document.getElementById('first').style.color = 'green';
+        //     event.stopPropagation(); //this is for cut the road of lower level to upper level...
+        // })
+        document.getElementById('myList').addEventListener('click', function(event){
+            // console.log(this, event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+        // document.getElementById('container').addEventListener('click', function(event){
+        //     console.log('Container clicked');
+        // })
+    </script>
+
+
+</body>
+</html>
