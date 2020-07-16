@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JSON</h1>
+    <h2>JavaScript Object Notation</h2>
+    <ul id="users-container">
+
+    </ul>
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => displayUsers(json))
+            .catch(error => console.log(error))
+
+
+        function displayUsers(users) {
+            const ul = document.getElementById("users-container");
+            const userNames = users.map(user => user.username);     //Here indicates all userNames of JSON data by .map method...
+            // console.log(userNames);
+            for (let i = 0; i < userNames.length; i++) {
+                const userName = userNames[i];
+                const li = document.createElement("li");    //Here create a li for every userName...
+                li.innerText = userName;    //Here indicates of the innerText would be userName...
+                ul.appendChild(li);     //Here defines li into ul as a child...
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

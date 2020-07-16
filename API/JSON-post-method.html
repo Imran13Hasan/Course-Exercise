@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h2>JavaScript Object Notation</h2>
+    <ul id="users-container">
+
+    </ul>
+
+    <input id="title" type="text" placeholder="title">
+    <br>
+    <input id="body" type="text" placeholder="details here">
+    <br>
+    <input id="userId" type="number" placeholder="User ID">
+    <br>
+    <button id="submit">submit</button>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <p>
+        Title: <span id="ti"></span>
+        <br/>
+        Body: <span id="bo"></span>
+        <br/>
+        UserID: <span id="id"></span>
+    </p>
+
+
+    <script>
+
+        // const postInfo = {title: 'foo', body: 'bar', userId: 1}
+    document.getElementById("submit").addEventListener("click", function(postInfo){
+        // console.log("submit korso");
+        const title = document.getElementById("title").value;
+        const body = document.getElementById("body").value;
+        const userId = document.getElementById("userId").value;
+        const post = {title: title, body: body, userId: userId};
+        nowPostToServer(post);
+    })
+
+        function nowPostToServer(postInfo){
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify(postInfo),
+                headers: {
+                "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error =>console.log(error) & alert("Something is wrong, please fix the error."))
+        }
+
+    
+    </script>
+
+
+</body>
+</html>
